@@ -7,7 +7,7 @@ Describe "ValidateIIS" {
     
     # Check if IIS is installed
     It "IIS Service Started" {
-         (Get-Service W3SVC).Status Should be "Running"
+         (Get-Service W3SVC).Status | Should be "Running"
     }
 
     # Check if Website is created
@@ -17,6 +17,6 @@ Describe "ValidateIIS" {
     
     # Check if Application exsists
     It "IIS Application Pool Started" {
-         (Get-WebAppPoolState -name $IISPool).Value Should be "Started"
+         (Get-WebAppPoolState -name $IISPool).Value | Should be "Started"
     }
 }
