@@ -10,8 +10,7 @@ est capable d'interpréter pour donner des informations fiables sur l'état du dép
 Ce rapport sera situé dans le chemin correspondant à la variable $Source.
 
 Pour lancer ce script dans Jenkins:
-powerShell.exe -executionpolicy Bypass -File RunPester.ps1 -Source %WORKPLACE% -Target 'ibiigr09.srv-ib.dev' 
-               -TestName 'ValidateCCV' -IISRoot 'D:\Inetpub\collecte-rmoe-ccv-poc' -Outfile 'ValidateCCV.XML' -DriveLetter 'P:'`               -LifePage 'http://collecte-rmoe-ccv-poc/Lifepage.aspx' -IISSite 'site-name' -IISPool 'Pool' -ApplicationVersion '1.0.1b' -ApplicationName 'CCV DEV'
+
  
 .PARAMETER Source
 Correspond à la variable %WORKPLACE% dans Jenkins.
@@ -46,10 +45,7 @@ Correspond au nom du fichier du rapport XML qui va être généré.
 .PARAMETER DriveLetter
 Correspond à la lettre du lecteur réseau temporaire qui va être créé pour copier le fichier XML de résultat.
  
-.EXAMPLE
-C:PS> RunPester.ps1 -Source %WORKPLACE% -Target 'ibiigr09.srv-ib.dev' -TestName 'ValidateCCV' -IISRoot 'D:\Inetpub\collecte-rmoe-ccv-poc' -Outfile 'ValidateCCV.XML' -DriveLetter 'P:' `
-                    -LifePage 'http://collecte-rmoe-ccv-poc/Lifepage.aspx' -IISSite 'site-name' -IISPool 'Pool' -ApplicationVersion '1.0.1b' -ApplicationName 'CCV DEV'
- 
+
 #>
 
  param (
